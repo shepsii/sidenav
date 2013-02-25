@@ -46,8 +46,8 @@ Ext.define('SideNav.controller.SideNav', {
     this._rightShown = false;
     
     this.getMain().getDraggable().setConstraint({
-        min: { x: -300, y: 0 },
-        max: { x: 300, y: 0 }
+        min: { x: 0 - this.getLeft().element.getWidth(), y: 0 },
+        max: { x: this.getRight().element.getWidth(), y: 0 }
     });
     
     this.getMain().getDraggable().on({
